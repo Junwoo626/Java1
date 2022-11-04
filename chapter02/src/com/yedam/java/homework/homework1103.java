@@ -1,6 +1,6 @@
-package com.yedam.com.ch0205;
+package com.yedam.java.homework;
 
-public class VariableExample {
+public class homework1103 {
 	public static void main(String[] args) {
 		//문제1)
 		int x;
@@ -25,17 +25,17 @@ public class VariableExample {
 		  /*byte var1 = 128; =>*/ int var1 = 128;
 		  /*char var2 = "B"; =>*/ char var2 = 'B';
 		  /*String var3 = 44032; =>*/ String var3 = "44032";
-		  /*int var4 = 100000000000; =>*/ long var4 = 100000000000;
+		  /*int var4 = 100000000000; =>*/ long var4 = 100000000000L;
 		  /*float var5 = 43.93106; =>*/ float var5 = 43.93106F;
 		  /*long var6 = 301.3; =>*/ double var6 = 301.3;
 		 
 		
 		System.out.printf("%d",var1);
 		System.out.printf("%s",var2);
-		System.out.printf("")
+//		System.out.printf("")
 		System.out.printf("%012d",var4);
 		System.out.printf("%8.5f",var5);
-		System.out.printf("")
+//		System.out.printf("")
 		
 		 //문제4
 		byte a = 35;
@@ -61,7 +61,8 @@ public class VariableExample {
 		char charValue = 'A';
 		String strValue = "번지";
 		
-		System.out.println("charValue" + (intValue1 + intValue2) + "intvalue3" + "strValue" + "(double)intValue4");
+		
+		System.out.println(charValue + (intValue1 + intValue2) + intValue3 + strValue + (double)intValue4);
 		
 		// git관련 작업 
 	}
