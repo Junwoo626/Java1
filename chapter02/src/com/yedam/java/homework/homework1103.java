@@ -61,11 +61,6 @@ public class VariableExample {
 		char charValue = 'A';
 		String strValue = "번지";
 		
-		float floatValue = intValue4;
-		str1 = intValue1;
-		str2 = intValue3;
-		str3 = 
-
 		System.out.println("charValue" + (intValue1 + intValue2) + "intvalue3" + "strValue" + "(double)intValue4");
 		
 		// git관련 작업 
