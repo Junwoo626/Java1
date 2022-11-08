@@ -1,5 +1,7 @@
 package com.yedam.java.ch0402;
 
+import java.util.Scanner;
+
 public class ConditionalStatementSubject {
 	public static void main(String[] args) {
 		// 문제1) 책 p.161 5번
@@ -79,20 +81,69 @@ public class ConditionalStatementSubject {
 		// 최종으로 주사위를 몇번 던졌는지 횟수를 출력
 		// 숫자의 합이 5가 되는 조합은 (1, 4), (4, 1), (2, 3), (3, 2)
 
-
 		int count = 0;
-		while(true) { 
-			int x = (int) (Math.random()*6) + 1; //내부에서 선언하고 연산일으키면됨
-			int y = (int) (Math.random()*6) + 1;
+		while (true) {
+			int x = (int) (Math.random() * 6) + 1; // 내부에서 선언하고 연산일으키면됨
+			int y = (int) (Math.random() * 6) + 1;
 			count++;
 			System.out.printf("( %d, %d )\n", x, y);
-			if(x + y == 5) {
+			if (x + y == 5) {
 				break;
 			}
 		}
 		System.out.println("주사위를 던진 횟수는 총 " + count + "번 입니다.");
-			
-			
 
-	}
+		// p.161 문제 6)
+		// * -> 첫번째 줄, 공백 3개, 별 1개 => 총 문자 4개
+		// ** -> 두번째 줄, 공백 2개, 별 2개 => 총 문자 4개
+		// *** -> 세번째 줄, 공백 1개, 별 3개 => 총 문자 4개
+		// **** -> 네번째 줄, 공백 0개, 별 4개 => 총 문자 4개
+
+//		for (int i = 1; i <= 4; i++) { // 라인
+//			for (int j = 1; j <= 4; j++) { // 문자의수
+//				if (j <= (4 - i)) {
+//					System.out.print(" ");
+//				} else {
+//					System.out.print("*");
+//				}
+//			}
+//			System.out.println();
+
+			// p.161 문제 7)
+			boolean run = true;
+			int balance = 0;
+			Scanner scanner = new Scanner(System.in);
+
+			while (run) {
+				System.out.println("----------------------------");
+				System.out.println("1.예금 | 2.출금 | 3.잔고 | 4.종료");
+				System.out.println("----------------------------");
+				System.out.print("선택> ");
+				int selectNo = Integer.parseInt(scanner.nextLine()); // parseInt => String만 가능
+																		// 참조타입끼리,캐스팅끼리
+				if (selectNo == 1) {
+					// 메뉴 : 예금
+					System.out.print("예금액> ");
+					int money = Integer.parseInt(scanner.nextLine());
+					balance = balance + money;
+				} else if (selectNo == 2) {
+					// 메뉴 : 출금
+					System.out.print("출금액> ");
+					int money = Integer.parseInt(scanner.nextLine());
+					balance -= money;
+				} else if (selectNo == 3) {
+					// 메뉴 : 잔고
+					System.out.print("잔고> "+ balance);
+				} else if (selectNo == 4) {
+					// 메뉴 : 종료
+					run = false;
+				} else {
+					// 기타입력
+					System.out.println("정해진 메뉴(1~4) 중에서 선택해주세요.");
+				}
+
+			}
+
+		}
+	
 }
