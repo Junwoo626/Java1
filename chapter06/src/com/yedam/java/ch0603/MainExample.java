@@ -14,6 +14,7 @@ public class MainExample {
 		System.out.println("색깔 : " + newCar.color);
 		
 		Car subCar = new Car("아이오닉", "하얀색");
+		
 		System.out.println("제조회사 : " + subCar.company);
 		System.out.println("모델명 : " + subCar.model);
 		System.out.println("색깔 : " + subCar.color);

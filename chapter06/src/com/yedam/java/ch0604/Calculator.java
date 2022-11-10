@@ -39,11 +39,11 @@ public class Calculator {
 	}
 	
 	//사각형의 넓이 구하기
-	
+	//정사각형 4면이 동일
 	double areaRectangle(double width) {
 		return width * width;
 	}
-	
+	// 직사각형 마주보는 두 면만 동일
 	double areaRectangle(double width, double height) {
 		return width * height;
 	}
